@@ -5,8 +5,7 @@ import Card from "./card";
 
 export default async function Content() {
 
-    const req = await fetch('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf', { cache: 'no-store' })
-    const contents = await req.json();
+    const contents = await getData();
 
     return(
         <section className="flex justify-between overflow-x-hidden w-full no-scrollbar" id="generator">
@@ -29,4 +28,12 @@ export default async function Content() {
 
 
 
+async function getData(){
 
+    const req = await fetch('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf', { cache: 'no-store' })
+    const data = await req.json()
+
+    console.log(data);
+
+    return data;
+}
