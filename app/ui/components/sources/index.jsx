@@ -1,10 +1,12 @@
 
-const reqUrl = 'http://medieval-memes.local/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf'
+const reqUrl = 'http://medival-admin.byethost6.com/wp-json/wp/v2/titles?acf_format=standard&_fields=id,title'
 
 const Source = async () => {
 
     const req = await fetch(reqUrl, {cache: "no-store"});
-    const contents = await req.json(); 
+    const contents = await req.json();
+    
+    console.log(req)
 
 
     return(
@@ -25,7 +27,7 @@ const Source = async () => {
                     <li
                     key={content.id}
                     >
-                        <p>{content.acf.source}</p>
+                        <p>{content.acf.imagesource}</p>
                     </li>
                 ))}
             </ul>
