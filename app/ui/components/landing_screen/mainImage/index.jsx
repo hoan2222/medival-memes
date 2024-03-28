@@ -10,7 +10,7 @@ export default function MainImage(){
                     <img src="/medival-memes/MemeGenerator.svg" alt="Memegenerator" width={800} />
            </div>
            <div className="flex justify-center">
-            <a href="/#options">
+            <a href="/medival-memes/#options">
             <Botton />
             </a>
                 
