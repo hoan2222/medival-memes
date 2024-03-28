@@ -10,7 +10,10 @@ export default function MainImage(){
                     <img src="/MemeGenerator.svg" alt="Memegenerator" width={800} />
            </div>
            <div className="flex justify-center">
-                <Botton />
+            <a href="/#options">
+            <Botton />
+            </a>
+                
            </div>
         </div>
     )

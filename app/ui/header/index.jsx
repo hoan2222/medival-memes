@@ -8,7 +8,7 @@ export default function Header(){
                 <a href="/#landing">Home of Memes</a>
             </li>
             <li>
-                <a href="">Memegenerator</a>
+                <a href="/#option">Memegenerator</a>
             </li>
             <li>
                 <a href="/#sources">Bildquellen</a>

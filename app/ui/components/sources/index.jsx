@@ -1,49 +1,39 @@
 
+const reqUrl = 'http://medieval-memes.local/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf'
 
-export default function Source(){
+const Source = async () => {
+
+    const req = await fetch(reqUrl, {cache: "no-store"});
+    const contents = await req.json(); 
+
 
     return(
         <div className="px-28 pt-16 pb-10" id="sources">
             <h1 className="text-center text-4xl font-bold pb-6">Bildquellen</h1>
+            <div className="flex ">
             <ul className="text-2xl">
-                <li>
-                    <div className="flex justify-start">
-                        <h1  className="font-bold pr-4">Quelle 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
-                    </div>
-                    
+                {contents.map(content => (
+                <li 
+                key={content.id}
+                >
+                    <h1  className="font-bold pr-4">{content.title.rendered}</h1>
                 </li>
-                <li>
-                    <div className="flex justify-start">
-                        <h1  className="font-bold pr-4">Quelle 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
-                    </div>
-                    
-                </li>
-                <li>
-                    <div className="flex justify-start">
-                        <h1  className="font-bold pr-4">Quelle 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
-                    </div>
-                    
-                </li>
-                <li>
-                    <div className="flex justify-start">
-                        <h1  className="font-bold pr-4">Quelle 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
-                    </div>
-                    
-                </li>
-                <li>
-                    <div className="flex justify-start">
-                        <h1  className="font-bold pr-4">Quelle 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
-                    </div>
-                    
-                </li>
-               
+                ))}
             </ul>
+            <ul className="text-2xl">
+                {contents.map(content => (
+                    <li
+                    key={content.id}
+                    >
+                        <p>{content.acf.source}</p>
+                    </li>
+                ))}
+            </ul>
+            </div>
+            
         </div>
 
     )
 }
+
+export default Source;

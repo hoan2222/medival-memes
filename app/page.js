@@ -12,7 +12,6 @@ export default function Home() {
     <div>
       <Landing />
       <Option />
-      <Placeholder />
       <Content />
       <Source />
       <Tagungen />
