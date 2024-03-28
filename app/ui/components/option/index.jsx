@@ -16,7 +16,7 @@ export default function Option(){
                     <h1 className="p-2 text-center text-3xl text-white font-bold">kostenlose Memes</h1>
                 </motion.div>
             </a>
-            <a href="/generator">
+            <a href="/medival-memes/generator">
                 <motion.div 
                 className="rounded-full w-[20rem] py-2 bg-[#111C2A]"
                 whileHover={{ background: "linear-gradient(90deg, rgba(204,46,22,1) 0%, rgba(251,191,0,1) 100%)"}}
