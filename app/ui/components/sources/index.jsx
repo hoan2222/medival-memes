@@ -36,7 +36,7 @@ export default Source;
 
 async function getData(){
 
-    const req = await fetch('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf')
+    const req = await fetch('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf', { next: { revalidate: 3600 } })
     const data = await req.json()
 
     return data;
