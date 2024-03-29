@@ -5,7 +5,7 @@ import Card from "./card";
 
 export default async function Content() {
 
-    const contents = await getData();
+    const contents = await fetch('/api/');
 
     return(
         <section className="flex justify-between overflow-x-hidden w-full no-scrollbar" id="generator">
@@ -28,12 +28,4 @@ export default async function Content() {
 
 
 
-async function getData(){
 
-    const req = await fetch('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf')
-    const data = await req.json()
-
-    console.log(data);
-
-    return data;
-}
