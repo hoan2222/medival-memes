@@ -5,7 +5,7 @@ import Card from "./card";
 
 export default async function Content() {
 
-    const contents = await fetch('/api/');
+    const contents = await fetch('https://hoan2222.github.io/medival-memes/api');
 
     return(
         <section className="flex justify-between overflow-x-hidden w-full no-scrollbar" id="generator">
