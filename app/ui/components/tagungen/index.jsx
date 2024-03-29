@@ -8,7 +8,7 @@ export default function Tagungen(){
             <div className="flex justify-center p-16 text-4xl font-bold text-white">
                 <h1 className="">Tagungen in der TU Chemnitz</h1> 
             </div>
-            <div className="flex justify-between px-28 py-16">
+            <div className="flex flex-col sm:flex-row justify-between px-28 py-16 space-y-2 sm:space-y-0">
             <Box title="14. Juli 2024" content="Lorem Ipsum und das übliche Bla Bla Bla." />
             <Box title="15. Juli 2024" content="Lorem Ipsum und das übliche Bla Bla Bla." />
             <Box title="16. Juli 2024" content="Lorem Ipsum und das übliche Bla Bla Bla." /> 

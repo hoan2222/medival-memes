@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./ui/header";
+import MobileNav from "./ui/navigation/mobilenav";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({subsets: ["latin"], weight: ["400"]})
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
      
       <body className={poppins.className}>
-          <Header />
+        <div className="block sm:hidden"> <MobileNav /> </div>
+          <div className="hidden sm:block"><Header /></div>
+          
           {children}
         </body>
     </html>

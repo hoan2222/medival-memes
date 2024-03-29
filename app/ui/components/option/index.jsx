@@ -7,7 +7,7 @@ export default function Option(){
     return(
         <div className="flex flex-col justify-between  w-full   my-10 pt-16 shadow-xl" id="option">
             <h1 className="py-8 text-center text-3xl text-[#111C2A] font-bold">Wähle deine bevorzugte Option</h1>
-            <div className="flex justify-between py-8 px-[20%]">
+            <div className="flex flex-col sm:flex-row justify-between py-8 px-[20%] space-y-2 sm:space-y-0">
             <a href=" /#generator">
                 <motion.div 
                 className="rounded-full w-[20rem] py-2 bg-[#111C2A]"
