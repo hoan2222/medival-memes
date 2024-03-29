@@ -3,7 +3,7 @@
 import Card from "./card";
 
 
-export default async function Content() {
+const Content =  async () => {
 
     const contents = await fetch('https://hoan2222.github.io/medival-memes/api');
 
@@ -24,6 +24,8 @@ export default async function Content() {
        
     )
 }
+
+export default Content;
 
 
 
