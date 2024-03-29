@@ -6,7 +6,7 @@
 
 const nextConfig = {
 
-    basePath: '/medival-memes',
+
 
     output: 'export',
 

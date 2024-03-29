@@ -6,6 +6,7 @@ import Impressum from "./ui/components/impressum";
 import Placeholder from "./ui/components/placeholder";
 import Tagungen from "./ui/components/tagungen";
 import Content from "./ui/components/contents";
+import MobileNav from "./ui/navigation/mobilenav";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Source />
       <Tagungen />
       <Impressum />
+      
     </div>
   );
 }

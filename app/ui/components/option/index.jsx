@@ -8,7 +8,7 @@ export default function Option(){
         <div className="flex flex-col justify-between  w-full   my-10 pt-16 shadow-xl" id="option">
             <h1 className="py-8 text-center text-3xl text-[#111C2A] font-bold">Wähle deine bevorzugte Option</h1>
             <div className="flex justify-between py-8 px-[20%]">
-            <a href="/medival-memes/#generator">
+            <a href=" /#generator">
                 <motion.div 
                 className="rounded-full w-[20rem] py-2 bg-[#111C2A]"
                 whileHover={{ background: "linear-gradient(90deg, rgba(204,46,22,1) 0%, rgba(251,191,0,1) 100%)"}}
@@ -16,7 +16,7 @@ export default function Option(){
                     <h1 className="p-2 text-center text-3xl text-white font-bold">kostenlose Memes</h1>
                 </motion.div>
             </a>
-            <a href="/medival-memes/generator">
+            <a href=" /generator">
                 <motion.div 
                 className="rounded-full w-[20rem] py-2 bg-[#111C2A]"
                 whileHover={{ background: "linear-gradient(90deg, rgba(204,46,22,1) 0%, rgba(251,191,0,1) 100%)"}}
