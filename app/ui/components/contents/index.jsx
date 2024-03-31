@@ -2,9 +2,16 @@
 
 import useSWR from 'swr';
 
-import fetcher from '@/app/api/route';
 
 import Card from "./card";
+
+const fetcher = async () => {
+
+    const res = await fetch('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf');
+    const data = await res.json();
+
+    return data;
+  }
 
 
 const Content =  async () => {
