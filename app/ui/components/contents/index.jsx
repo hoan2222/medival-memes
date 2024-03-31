@@ -1,13 +1,11 @@
-import useSWR from 'swr';
 
-import fetcher from '@/app/api/route';
 
 import Card from "./card";
 
 
 const Content =  async () => {
 
-    const { data, error, isLoading} = useSWR('/api/route', fetcher)
+    const data = await getData();
 
     if (error) return <div>failed to load...</div>
     if (isLoading) return <div>loading...</div>
@@ -32,6 +30,12 @@ const Content =  async () => {
 export default Content;
 
 
+async function getData(){
 
+    const req = await fetch('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf', { next: { revalidate: 3600 } })
+    const data = await req.json()
+
+    return data;
+}
 
 
