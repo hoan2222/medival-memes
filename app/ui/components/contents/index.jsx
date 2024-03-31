@@ -16,7 +16,7 @@ const fetcher = async () => {
 
 const Content =  async () => {
 
-    const { data, error, isLoading} = useSWR('/api/route', fetcher)
+    const { data, error, isLoading} = useSWR('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf', fetcher)
 
     if (error) return <div>failed to load...</div>
     if (isLoading) return <div>loading...</div>
