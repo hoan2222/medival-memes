@@ -11,7 +11,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 const Content =  () => {
 
     const { data, error} = useSWR(
-        "https://eu10.proxysite.com/process.php?d=BqGpqyhmlQesgZp6vKYulxletYh%2FHpgpmGDyRh6t3fJymQ79NX5XteD7dCKlv%2BwxQ15mfyUr5U2zS9FRLaES7IWvoVm6JtJ1KOt2Fwn5Sssw5t6f%2F4tD1dyEbe1OTXtw6uJuMDrYeA%3D%3D&b=1",
+        "https://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf",
         fetcher
         );
 
