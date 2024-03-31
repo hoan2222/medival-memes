@@ -1,18 +1,29 @@
+import useSWR from 'swr';
+
 
 
 import Card from "./card";
 
 
+const fetcher = async () => {
+
+    const res = await fetch('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf', fetcher);
+    const data = await res.json();
+
+    return data
+}
+
 const Content =  async () => {
 
-    const data = await getData();
+    const { data, error} = useSWR('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf', fetcher)
 
-    if (error) return <div>failed to load...</div>
-    if (isLoading) return <div>loading...</div>
+    if(error) return <h1>{error}</h1>;
+
+    
     return(
         <section className="flex justify-between overflow-x-hidden w-full no-scrollbar" id="generator">
                  <div className="flex w-full overflow-auto [&>div]:flex-shrink-0 px-10 no-scrollbar">
-                    {data?.map((content) => (
+                    {data ? (data?.map((content) => (
                         <Card 
                         key={content.id}
                         title={data.title.rendered}
@@ -20,7 +31,7 @@ const Content =  async () => {
                         image={content.acf.thumbnail}
                         />
 
-                    ))}
+                    ))) : <h1>is Loading...</h1>}
                 </div>
         </section>
        
@@ -30,12 +41,6 @@ const Content =  async () => {
 export default Content;
 
 
-async function getData(){
 
-    const req = await fetch('http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf', { next: { revalidate: 3600 } })
-    const data = await req.json()
-
-    return data;
-}
 
 
