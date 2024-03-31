@@ -11,7 +11,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 const Content =  () => {
 
     const { data, error} = useSWR(
-        "https://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf",
+        "http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf",
         fetcher
         );
 
