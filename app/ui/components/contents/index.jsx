@@ -15,7 +15,7 @@ const Content =  () => {
         fetcher
         );
 
-    if(error) return <h1>failure</h1>;
+    if(error) {console.log(error); return <h1>failure</h1>};
     if(!data) return <h1>loading...</h1>
 
     
