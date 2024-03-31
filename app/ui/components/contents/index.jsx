@@ -1,11 +1,13 @@
-import useSWR from 'swr'
+import useSWR from 'swr';
+
+import fetcher from '@/app/api/route';
 
 import Card from "./card";
 
 
 const Content =  async () => {
 
-    const { data, error, isLoading} = useSWR('/api', fetcher)
+    const { data, error, isLoading} = useSWR('/api/route', fetcher)
 
     if (error) return <div>failed to load...</div>
     if (isLoading) return <div>loading...</div>
