@@ -8,7 +8,7 @@ import Card from "./card";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Content =  async () => {
+const Content =  () => {
 
     const { data, error} = useSWR(
         "http://kjflaksjdfhkjsdf.medianewsonline.com/wp-json/wp/v2/titles?&acf_format=standard&_fields=id,title,acf",
