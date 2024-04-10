@@ -58,19 +58,19 @@ export default function MobileNav(){
                         <div className="pt-10">
                          <ul className="text-center px-16 py-4 text-lg font-semibold space-y-10 bg-white">
                              <li>
-                                 <a href="/medival-memes/#landing">Home of Memes</a>
+                                 <a href="/#landing">Home of Memes</a>
                              </li>
                              <li>
-                                 <a href="/medival-memes/#option">Memegenerator</a>
+                                 <a href="/#option">Memegenerator</a>
                              </li>
                              <li>
-                                 <a href="/medival-memes/#sources">Bildquellen</a>
+                                 <a href="/#sources">Bildquellen</a>
                              </li>
                              <li>
-                                 <a href="/medival-memes/#tagungen">Tagungen</a>
+                                 <a href="/#tagungen">Tagungen</a>
                              </li>
                              <li>
-                                 <a href="/medival-memes/#impressum">Impressum</a>
+                                 <a href="/#impressum">Impressum</a>
                              </li>
                          </ul>
                         </div>
